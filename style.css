@@ -2,6 +2,19 @@
     text-align: center;
 }
 
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.items{
+    justify-content: center;
+}
+
+.navbar, .bg-light {
+    background-color: lightskyblue !important;
+}
+
 #a {
 background-color: aqua;
 display: flex;
