@@ -1,0 +1,32 @@
+#title {
+    text-align: center;
+}
+
+#a {
+background-color: aqua;
+display: flex;
+}
+#b {
+background-color:lightgreen;
+display: flex;
+}
+#c {
+background-color: lightsteelblue;
+display: flex;
+}
+#d {
+background-color: pink;
+display: flex;
+}
+#e {
+background-color: lightskyblue;
+display: flex;
+}
+#f {
+background-color: lightgoldenrodyellow;
+display: flex;
+}
+#g {
+background-color: lightseagreen;
+display: flex;
+}
