@@ -8,7 +8,7 @@ $("#submit").click(function () {
     $("#wifiTotal").html("$" + Number($("#wifi")[0].value));
     $("#gasTotal").html("$" + Number($("#gas")[0].value));
     splitTotals();
-    toEach()
+    toEach();
 })
 
 
@@ -20,7 +20,7 @@ function splitTotals() {
     $("#gasSplit").html("$" + (($("#gas")[0]).value)/4)
 }
 
-// TODO ADD TOTALS TO EACH PERSON
+// TOTAL DUE TO EACH PERSON
 function toEach() {
     $("#Leah").html("<u>To Leah:</u><br>$");
     $("#Leah").append((((($("#elec")[0]).value)/4) + (($("#water")[0]).value)/4) + (($("#gas")[0]).value)/4)
