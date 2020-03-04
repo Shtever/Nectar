@@ -8,16 +8,25 @@ $("#submit").click(function () {
     $("#wifiTotal").html("$" + Number($("#wifi")[0].value));
     $("#gasTotal").html("$" + Number($("#gas")[0].value));
     splitTotals();
-    // toEach()
+    toEach()
 })
 
 
 function splitTotals() {
-    $("#elecSplit").append("$" + (($("#elec")[0]).value)/4)
-    $("#waterSplit").append("$" + (($("#water")[0]).value)/4)
-    $("#gardSplit").append("$" + (($("#gard")[0]).value)/4)
-    $("#wifiSplit").append("$" + (($("#wifi")[0]).value)/4)
-    $("#gasSplit").append("$" + (($("#gas")[0]).value)/4)
+    $("#elecSplit").html("$" + (($("#elec")[0]).value)/4)
+    $("#waterSplit").html("$" + (($("#water")[0]).value)/4)
+    $("#gardSplit").html("$" + ((($("#gard")[0]).value)-10)/4)
+    $("#wifiSplit").html("$" + (($("#wifi")[0]).value)/4)
+    $("#gasSplit").html("$" + (($("#gas")[0]).value)/4)
 }
 
 // TODO ADD TOTALS TO EACH PERSON
+function toEach() {
+    $("#Leah").html("<u>To Leah:</u><br>$");
+    $("#Leah").append((((($("#elec")[0]).value)/4) + (($("#water")[0]).value)/4) + (($("#gas")[0]).value)/4)
+    $("#Brit").html("<u>To Brit:</u><br>$");
+    $("#Brit").append((($("#water")[0]).value)/4)
+    $("#Steve").html("<u>To Steve:</u><br>$");
+    $("#Steve").append((((($("#wifi")[0]).value)/4) + ((($("#gard")[0]).value)-10)/4)+ "**")
+    $("#Notes").html(" **+$5 Ea. for dog droppings")
+}

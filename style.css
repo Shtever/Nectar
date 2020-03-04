@@ -15,9 +15,21 @@ text-align: center;
     border-radius: 25px;
 }
 
+.toEach {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .block {
     display: block;
     text-align: center;
+}
+
+#Notes{
+    margin-bottom: 2%;
 }
 
 .btn-info {
