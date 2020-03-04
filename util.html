@@ -20,41 +20,94 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <!-- JQuery  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
 
-            <!-- Stylesheet  -->
+    <!-- Stylesheet  -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<!-- NAVBAR  -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Nectar Dr.</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Utilities <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="chore.html">Chores</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Nectar Dr.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Utilities <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chore.html">Chores</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
     <div id="container">
-        <div class="items" id="title"><h1>Utilities</h1></div>
-        <div class="items" id="a">TODO: Utility totals input boxes. Render to separate containers</div>
-        <div class="items" id="b">TODO: Totals divided by 4</div>
-        <div class="items" id="c">TODO: Total $ due to each person</div>
+        <div id="title">
+            <h1>Utilities</h1>
+        </div>
+        <!-- TODO: Utility totals input boxes. Render to separate containers -->
+        <!-- TODO: Totals Devided by 4 -->
+        <!-- TODO: Total $ due to each person -->
+        <form>
+            <div class="items">
+                <input type="number" step=".01" maxlength="5" id="elec" name="Elec"><br><label>Electric</label>
+            </div>
+
+            <div class="items">
+                <input type="number" step=".01" maxlength="5" id="water" name="Water"><br><label>Water</label>
+            </div>
+
+            <div class="items">
+                <input type="number" step=".01" maxlength="5" id="gard" name="Gard"><br><label>Gardener</label>
+            </div>
+
+            <div class="items">
+                <input type="number" step=".01" maxlength="5" id="wifi" name="Wifi"><br><label>Wifi</label>
+            </div>
+
+            <div class="items">
+                <input type="number" step=".01" maxlength="5" id="gas" name="Gas"><br><label>Gas</label>
+            </div>
+
+
+            <div class="block">
+                <input type="submit" class="input btn-info" id="submit" value="SPLIT"></p>
+            </div>
+        </form>
+        <hr>
+        <div>
+            <p class="totals">TOTAL:</p>
+            <p class="totals" id="elecTotal"></p>
+            <p class="totals" id="waterTotal"></p>
+            <p class="totals" id="gardTotal"></p>
+            <p class="totals" id="wifiTotal"></p>
+            <p class="totals" id="gasTotal"></p>
+            <hr>
+            <p class="totals">SPLIT:</p>
+            <p class="totals" id="elecSplit"></p>
+            <p class="totals" id="waterSplit"></p>
+            <p class="totals" id="gardSplit"></p>
+            <p class="totals" id="wifiSplit"></p>
+            <p class="totals" id="gasSplit"></p>
+        </div>
     </div>
+<div id="Leah"></div>
+<div id="Brit"></div>
+<div id="Steve"></div>
+
+    <!-- JQuery  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+
+
 </body>
 
 </html>
