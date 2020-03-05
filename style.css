@@ -1,5 +1,6 @@
 #title {
     text-align: center;
+    width: 100%;
 }
 
 form {
@@ -56,6 +57,27 @@ form {
 
 .navbar, .bg-light {
     background-color: lightskyblue !important;
+}
+
+.status {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 49%;
+}
+
+#incomplete, #complete {
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.chex{
+    font-size: 1.5vw;
+}
+
+.checkbox{
+    margin: 100%;
 }
 
 #a {
