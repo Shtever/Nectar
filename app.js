@@ -13,20 +13,31 @@ $("#submit").click(function () {
 
 
 function splitTotals() {
-    $("#elecSplit").html("$" + (($("#elec")[0]).value)/4)
-    $("#waterSplit").html("$" + (($("#water")[0]).value)/4)
-    $("#gardSplit").html("$" + ((($("#gard")[0]).value)-10)/4)
-    $("#wifiSplit").html("$" + (($("#wifi")[0]).value)/4)
-    $("#gasSplit").html("$" + (($("#gas")[0]).value)/4)
+    $("#elecSplit").html("$" + (($("#elec")[0]).value) / 4)
+    $("#waterSplit").html("$" + (($("#water")[0]).value) / 4)
+    $("#wifiSplit").html("$" + (($("#wifi")[0]).value) / 4)
+    $("#gasSplit").html("$" + (($("#gas")[0]).value) / 4)
+    if($("#gardTotal") > 0){
+        $("#gardSplit").html("$" + ((($("#gard")[0]).value) - 10) / 4)
+    } else {
+        $("#gardSplit").html("$" + 0)
+    }
+
 }
 
 // TOTAL DUE TO EACH PERSON
 function toEach() {
     $("#Leah").html("<u>To Leah:</u><br>$");
-    $("#Leah").append((((($("#elec")[0]).value)/4) + (($("#water")[0]).value)/4) + (($("#gas")[0]).value)/4)
+    $("#Leah").append((((($("#elec")[0]).value) / 4) + (($("#water")[0]).value) / 4) + (($("#gas")[0]).value) / 4)
     $("#Brit").html("<u>To Brit:</u><br>$");
-    $("#Brit").append((($("#water")[0]).value)/4)
+    $("#Brit").append((($("#water")[0]).value) / 4);
     $("#Steve").html("<u>To Steve:</u><br>$");
-    $("#Steve").append((((($("#wifi")[0]).value)/4) + ((($("#gard")[0]).value)-10)/4)+ "**")
-    $("#Notes").html(" **+$5 Ea. for dog droppings")
+    if ((($("#gard")[0]).value) > 0) {
+        $("#Steve").append((((($("#wifi")[0]).value) / 4) + ((($("#gard")[0]).value) - 10) / 4));
+        $("#Steve").append("**")        
+        $("#Notes").html(" **+$5 Ea. for dog droppings")
+    }else {
+        $("#Notes").html("")
+        $("#Steve").append("0")        
+    }
 }
