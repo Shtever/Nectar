@@ -61,10 +61,11 @@ form {
 
 .status {
     box-sizing: border-box;
-    display: inline-flex;
+    display: inline-block;
     justify-content: center;
     margin: 0 auto;
     width: 49%;
+    vertical-align: top;
 }
 
 #incomplete, #complete {
@@ -72,17 +73,22 @@ form {
     font-size: 2.5vw;
 }
 
-.chex{
+#chex {
+    display: unset;
     font-size: 1.5vw;
+    text-align: left;
 }
 
-.checkbox{
-    margin: 100%;
+input[type=checkbox] {
+    float: left;
+    margin-right: 2%;
+    margin-top: 1%;
+    transform: scale(2);
 }
 
-#a {
+h4 {
     background-color: aqua;
-    display: flex;
+    display: block;
 }
 
 #b {
