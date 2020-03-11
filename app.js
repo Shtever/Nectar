@@ -20,12 +20,12 @@ function splitTotals() {
     $("#gasSplit").html("$" + (($("#gas")[0]).value) / 4)
     // *** $10 WAS SUBTRACTED FROM TOTAL TO ACCOUNT FOR COST OF DOG DROPPINGS, SO IT WOULD DIVIDE -10 BY 4, RESULTING IN A NEGATIVE NUMBER.
     // IF/ELSE STATEMENT DIVIDES THE TOTAL IF IT'S POSITIVE, ELSE A '$0' IF THE TOTAL IS A NEGATIVE #.
-    if ($("#gardTotal") > 0) {
-        $("#gardSplit").html("$" + ((($("#gard")[0]).value) - 10) / 4)
+    if ($("#gardTotal").value > 0) {
+        $("#gardSplit").html("$" + (((($("#gard")[0]).value) - 10) / 4))
     } else {
-        $("#gardSplit").html("$" + 0)
-    }
+        $("#gardSplit").html("$" + ((($("#gard")[0]).value) / 4))
 
+    }
 }
 
 // RENDERS TOTAL DUE TO EACH PERSON (LEAH/BRIT/STEVE)
